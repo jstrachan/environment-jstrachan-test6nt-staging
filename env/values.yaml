@@ -12,7 +12,7 @@ cleanup:
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
-exposecontroller:
+expose:
   config:
     domain: 35.195.78.220.nip.io
     exposer: Ingress
@@ -24,17 +24,6 @@ exposecontroller:
     helm.sh/hook-delete-policy: hook-succeeded
 jenkins:
   servers:
-    gitea: []
-    ghe: []
     global:
       envvars:
         TILLER_NAMESPACE: kube-system
-  enabled: null
-prow:
-  user: ""
-  hmactoken: ""
-  oauthtoken: ""
-pipelinesecrets:
-  dockerconfig: ""
-controllerbuild:
-  enabled: null
